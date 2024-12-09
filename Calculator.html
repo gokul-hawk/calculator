@@ -1,0 +1,68 @@
+<html>
+<head>
+<title> calculator</title>
+<body>
+<style>
+input[type="text"]
+{
+ padding:20px 30px;
+ background-color:white;
+ color: blue;
+ font-size:20px;
+ }
+ input[type="button"]
+ {
+	padding:20px 30px;
+	background-color:black;
+	 color:white;
+	}
+ 
+ 
+ 
+ 
+ </style>
+<table><center>
+<tr>
+	<td colspan=3><input type="text" id="res"></input></td>
+	<td><input value="C" type="button" onclick="cl()"></input></td>
+</tr>
+<tr>
+	<td><input type="button" value="1" onclick="dis('1')"></input></td>
+	<td><input type="button" value="2" onclick="dis('2')"  ></input></td>
+	<td><input type="button" value="3" onclick="dis('3')"></input></td>
+	<td><input type="button" value="+" onclick="dis('+')"></input></td>
+</tr>
+<tr>
+	<td><input type="button" value="4" onclick="dis('4')"></input></td>
+	<td><input type="button" value="5" onclick="dis('5')"></input></td>
+	<td><input type="button" value="6" onclick="dis('6')"></input></td>
+	<td><input type="button" value="-" onclick="dis('-')"></input></td>
+</tr>
+<tr>
+	<td><input type="button" value="7" onclick="dis('7')"></input></td>
+	<td><input type="button" value="8" onclick="dis('8')"></input></td>
+	<td><input type="button" value="9" onclick="dis('9')"></input></td>
+	<td><input type="button" value="*" onclick="dis('*')"></input></td>
+</tr>
+<tr>
+	<td><input type="button" value="." onclick="dis('.')"></input></td>
+	<td><input type="button" value="0" onclick="dis('0')"></input></td>
+	<td><input type="button" value="=" onclick="solve()"></input></td>
+	<td><input type="button" value="/" onclick="dis('/')"></input></td>
+</tr></table></center>
+<script>
+function dis(a){
+  document.getElementById("res").value+=a;
+  }
+function solve() {
+            let x = document.getElementById("res").value
+            let y = eval(x)
+            document.getElementById("res").value = y
+        }
+  function cl(){
+   document.getElementById("res").value=""
+   }
+  </script>
+
+</body>
+</head></html>
